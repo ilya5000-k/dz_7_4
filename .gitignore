@@ -1,0 +1,8 @@
+key.json
+*.tfstste
+*.backup
+terraform.tfstate
+vscode/
+terraform/
+key.sh
+variables.tf
