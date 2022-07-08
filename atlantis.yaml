@@ -6,7 +6,7 @@ parallel_apply: true
 projects:
 - name: my-project-name
   dir: .
-  workspace: default
+  workspace: stage
   terraform_version: v0.11.0
   delete_source_branch_on_merge: true
   autoplan:
