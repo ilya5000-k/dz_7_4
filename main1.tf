@@ -6,7 +6,7 @@ locals {
 }
 
 
-
+# qqq
 resource "yandex_compute_instance" "node_for_each" {
 for_each   =  toset(local.instance_count_for_each[terraform.workspace])
   name       = "node-for-each-${each.value}-${terraform.workspace}"
