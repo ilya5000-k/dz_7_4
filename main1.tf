@@ -1,7 +1,7 @@
 locals {
   instance_count_for_each = {
-    stage = ["vm-113"]
-    prod = ["vm-1", "vm-22"]
+    stage = ["vm-1"]
+    prod = ["vm-1", "vm-2"]
       }
 }
 
