@@ -4,7 +4,8 @@ repos:
   # If using a regex, it must start and end with a slash.
   # Repo ID's are of the form {VCS hostname}/{org}/{repo name}, ex.
   # github.com/runatlantis/atlantis.
-- id: /.*/
+#- id: /.*/
+- id: github.com/rilya5000-k/dz_7_4
   # branch is an regex matching pull requests by base branch
   # (the branch the pull request is getting merged into).
   # By default, all branches are matched
@@ -43,18 +44,18 @@ repos:
     - run: my-post-workflow-hook-command arg1
 
   # id can also be an exact match.
-- id: github.com/myorg/specific-repo
+- id: github.com/ilya5000-k/dz_7_4
 
 # workflows lists server-side custom workflows
 workflows:
   custom:
     plan:
       steps:
-      - run: my-custom-command arg1 arg2
+      #- run: my-custom-command arg1 arg2
       - init
       - plan:
-          extra_args: ["-lock", "false"]
-      - run: my-custom-command arg1 arg2
+     #     extra_args: ["-lock", "false"]
+      #- run: my-custom-command arg1 arg2
     apply:
       steps:
       - run: echo hi
