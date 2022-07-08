@@ -4,7 +4,7 @@ delete_source_branch_on_merge: true
 parallel_plan: true
 parallel_apply: true
 projects:
-- name: my-project-name
+- name: dz_7_4
   dir: .
   workspace: stage
   terraform_version: v0.11.0
@@ -18,15 +18,15 @@ workflows:
   myworkflow:
     plan:
       steps:
-      - run: my-custom-command arg1 arg2
+     # - run: my-custom-command arg1 arg2
       - init
       - plan:
           extra_args: ["-lock", "false"]
-      - run: my-custom-command arg1 arg2
+      #- run: my-custom-command arg1 arg2
     apply:
       steps:
       - run: echo hi
       - apply
 allowed_regexp_prefixes:
-- dev/
-- staging/
+- prod/
+- stage/
